@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<OutputType>Exe</OutputType>
+		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+		<GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+		<TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
+	</PropertyGroup>
+	<ItemGroup>
+		<Content Include="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CodeAnalysis" />
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.SourceGenerators.Testing" />
+		<PackageReference Include="xunit.v3.mtp-v2" />
+
+	</ItemGroup>
+
+	<ItemGroup>
+		<Using Include="Xunit" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Haruka.Analyzers\Haruka.Analyzers.csproj" />
+		<ProjectReference Include="..\Haruka\Haruka.csproj" />
+	</ItemGroup>
+
+</Project>

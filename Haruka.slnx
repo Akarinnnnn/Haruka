@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/config/">
+    <File Path=".editorconfig" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Project Path="Haruka.Analyzers.Test/Haruka.Analyzers.Test.csproj" />
+  <Project Path="Haruka.Analyzers/Haruka.Analyzers.csproj" />
+  <Project Path="Haruka/Haruka.csproj" />
+</Solution>
