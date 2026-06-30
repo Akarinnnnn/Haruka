@@ -1,7 +1,7 @@
 ﻿namespace Haruka.Analyzers;
 
 // Holder相关诊断
-internal static partial class DiagnosticDescriptors
+internal static partial class HarukaDiagnosticDescriptors
 {
 	internal static readonly DiagnosticDescriptor HARUKA1000 = new(
 		"HARUKA1000", "放置注册方法的类必须可以通过名字引用", "类“{0}”不可通过名字引用，无法为其生成服务注册代码",

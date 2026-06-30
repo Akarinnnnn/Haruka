@@ -51,32 +51,32 @@ internal record struct HolderDiagnostics(
 		string holderName = HolderDeclSyntax.Identifier.ValueText;
 		if (IsNotReferencable)
 		{
-			reportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.HARUKA1000, HolderDeclSyntax.GetLocation()));
+			reportDiagnostic(Diagnostic.Create(HarukaDiagnosticDescriptors.HARUKA1000, HolderDeclSyntax.GetLocation()));
 		}
 
 		if (IsNestedClass)
 		{
-			reportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.HARUKA1001, HolderNameSyntaxLocation,
+			reportDiagnostic(Diagnostic.Create(HarukaDiagnosticDescriptors.HARUKA1001, HolderNameSyntaxLocation,
 				holderName));
 		}
 
 		if (!IsPartial)
 		{
-			reportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.HARUKA1008,
+			reportDiagnostic(Diagnostic.Create(HarukaDiagnosticDescriptors.HARUKA1008,
 				HolderNameSyntaxLocation,
 				holderName));
 		}
 
 		if (IsRegistererNotStatic)
 		{
-			reportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.HARUKA1002,
+			reportDiagnostic(Diagnostic.Create(HarukaDiagnosticDescriptors.HARUKA1002,
 				HolderNameSyntaxLocation,
 				holderName));
 		}
 
 		if (IsRegistererNotPartial)
 		{
-			reportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.HARUKA1003,
+			reportDiagnostic(Diagnostic.Create(HarukaDiagnosticDescriptors.HARUKA1003,
 				HolderNameSyntaxLocation,
 				holderName));
 		}
@@ -84,14 +84,14 @@ internal record struct HolderDiagnostics(
 		ct.ThrowIfCancellationRequested();
 		if (IsRegisterMethodNotDeclared || IsRegistererContractViolation) // 有点屎山了
 		{
-			reportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.HARUKA1004,
+			reportDiagnostic(Diagnostic.Create(HarukaDiagnosticDescriptors.HARUKA1004,
 				HolderNameSyntaxLocation, InvalidRegistererLocations,
 				holderName));
 		}
 
 		if (IsRegisterMethodInExtBlock)
 		{
-			reportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.HARUKA1005,
+			reportDiagnostic(Diagnostic.Create(HarukaDiagnosticDescriptors.HARUKA1005,
 				PartialRegisterMethodNameLocation,
 				holderName));
 		}
@@ -99,7 +99,7 @@ internal record struct HolderDiagnostics(
 		ct.ThrowIfCancellationRequested();
 		if (DefinedRegistererLocation is Location definedRegisterNotNull)
 		{
-			reportDiagnostic(Diagnostic.Create(DiagnosticDescriptors.HARUKA1006,
+			reportDiagnostic(Diagnostic.Create(HarukaDiagnosticDescriptors.HARUKA1006,
 				definedRegisterNotNull,
 				holderName));
 		}

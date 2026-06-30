@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Haruka.Attributes;
 
@@ -10,4 +11,7 @@ public sealed class ProviderAttribute(ServiceLifetime lifetime) : Attribute
 	public object? Key { get; set; } = null;
 
 	public Type? ServiceType { get; set; } = null;
+
+	[StringSyntax("C#")]
+	public string? PropertyAccessibilityCSharpString { get; set; } = null;
 }

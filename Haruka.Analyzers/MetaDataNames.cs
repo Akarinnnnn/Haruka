@@ -8,8 +8,8 @@ internal static class MetaDataNames
 	internal const string ConfigureAttribute = "Haruka.Attributes.ConfigureAttribute";
 	internal const string RegisterationHolderAttribute = "Haruka.Attributes.HarukaRegisterationHolderAttribute";
 
+	internal const string NamespaceMsExtDI = "Microsoft.Extensions.DependencyInjection";
 	internal const string MSExtServiceLifetime = "ServiceLifetime";
 	internal const string MSExtIServiceCollection = "IServiceCollection";
-
-	internal const string NamespaceMsExtDI = "Microsoft.Extensions.DependencyInjection";
+	internal const string ServiceDescriptor = "ServiceDescriptor";
 }
